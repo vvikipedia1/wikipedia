@@ -1,0 +1,886 @@
+<html><head>
+    <script type="text/javascript">
+//<![CDATA[
+   i18nLang = "de";
+   i18nRtl = "";
+   appPath = "https://pageviews.wmcloud.org";
+   currentApp = "pageviews";
+  
+//]]>
+</script>
+<meta charset="utf-8">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
+<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" name="viewport">
+<link rel="shortcut icon" sizes="16x16 32x32 48x48 96x96" href="/images/favicon.ico?v=3">
+<script src="../scripts/application-1879894cdb.js"></script>
+<script src="../scripts/ad_block_test.js"></script>
+<link href="../styles/application-3dcd6fb5f1.css" rel="stylesheet">
+<script type="text/javascript">
+//<![CDATA[
+   // language selector
+   $(document).ready(function() {
+     $('.lang-link').on('click', function(e) {
+       e.preventDefault();
+       var expiryGMT = moment().add(30, 'days').toDate().toGMTString();
+       document.cookie = 'TsIntuition_userlang=' + $(e.target).data('lang') + '; expires=' + expiryGMT + '; path=/';
+  
+       var expiryUnix = Math.floor(Date.now() / 1000) + (30 * 24 * 60 * 60);
+       document.cookie = 'TsIntuition_expiry=' + expiryUnix + '; expires=' + expiryGMT + '; path=/';
+       location.reload();
+     });
+   });
+  
+//]]>
+</script>
+    <title>Pageviews Analysis</title>
+  </head>
+  <body class=" pageviews initial">
+    <div class="text-center site-notice-wrapper">
+      <div class="site-notice">
+        <!-- browser detection to display simple notice -->
+            </div>
+    </div>
+    <nav class="top-nav navbar">
+  <button class="navbar-toggle collapsed pull-left" data-toggle="collapse" data-target=".interapp-navigation" aria-expanded="false">
+    <span class="sr-only">Toggle navigation</span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+  </button>
+  <div class="pull-right nav-buttons">
+          <button class="btn btn-default btn-sm btn-settings js-test-settings" data-target="#settings-modal" data-toggle="modal">
+        <span class="glyphicon glyphicon-wrench"></span>
+        Einstellungen      </button>
+        <div class="btn-group dropdown help-btn-group">
+      <button class="btn btn-default btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <span class="glyphicon glyphicon-question-sign"></span>
+        Hilfe        <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu dropdown-menu-right">
+                  <li>
+            <a href="../html/faq.html">
+              Häufig gestellte Fragen            </a>
+          </li>
+          <li>
+            <a href="../html/url_structure.html">
+              URL-Struktur            </a>
+          </li>
+                <li>
+          <a href="../html/Pageviews_Analysis.html">
+            Dokumentation          </a>
+        </li>
+        <li class="divider" role="separator"></li>
+        <li>
+          <a href="../html/Talk:Pageviews_Analysis.html">
+            Ein Problem melden          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="btn-group dropdown lang-group">
+      <button class="btn btn-default btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+          <path d="M12.87 15.07l-2.54-2.51.03-.03c1.74-1.94 2.98-4.17 3.71-6.53H17V4h-7V2H8v2H1v1.99h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"></path>
+        </svg>
+        Deutsch        <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu dropdown-menu-right">
+        <li>
+          <a href="../html/i.php.html">
+            Hilf beim Übersetzen          </a>
+        </li>
+        <li class="divider" role="separator"></li>
+                            <li>
+            <a class="lang-link" href="#" data-lang="sms"></a>
+          </li>
+                            <li>
+            <a class="lang-link" href="#" data-lang="af">Afrikaans</a>
+          </li>
+                            <li>
+            <a class="lang-link" href="#" data-lang="az">Azərbaycanca</a>
+          </li>
+                            <li>
+            <a class="lang-link" href="#" data-lang="id">Bahasa Indonesia</a>
+          </li>
+                            <li>
+            <a class="lang-link" href="#" data-lang="ms">Bahasa Melayu</a>
+          </li>
+                            <li>
+            <a class="lang-link" href="#" data-lang="ban">Basa Bali</a>
+          </li>
+                            <li>
+            <a class="lang-link" href="#" data-lang="bs">Bosanski</a>
+          </li>
+                            <li>
+            <a class="lang-link" href="#" data-lang="br">Brezhoneg</a>
+          </li>
+                            <li>
+            <a class="lang-link" href="#" data-lang="ca">Català</a>
+          </li>
+                            <li>
+            <a class="lang-link" href="#" data-lang="cy">Cymraeg</a>
+          </li>
+                            <li>
+            <a class="lang-link" href="#" data-lang="da">Dansk</a>
+          </li>
+                            <li>
+            <a class="lang-link" href="#" data-lang="de">Deutsch</a>
+          </li>
+                            <li>
+            <a class="lang-link" href="#" data-lang="en">English</a>
+          </li>
+                                      <li>
+            <a class="lang-link" href="#" data-lang="es">Español</a>
+          </li>
+                            <li>
+            <a class="lang-link" href="#" data-lang="eo">Esperanto</a>
+          </li>
+                            <li>
+            <a class="lang-link" href="#" data-lang="eu">Euskara</a>
+          </li>
+                            <li>
+            <a class="lang-link" href="#" data-lang="fr">Français</a>
+          </li>
+                            <li>
+            <a class="lang-link" href="#" data-lang="gl">Galego</a>
+          </li>
+                            <li>
+            <a class="lang-link" href="#" data-lang="hr">Hrvatski</a>
+          </li>
+                            <li>
+            <a class="lang-link" href="#" data-lang="ia">Interlingua</a>
+          </li>
+                            <li>
+            <a class="lang-link" href="#" data-lang="it">Italiano</a>
+          </li>
+                            <li>
+            <a class="lang-link" href="#" data-lang="sw">Kiswahili</a>
+          </li>
+                            <li>
+            <a class="lang-link" href="#" data-lang="ku-latn">Kurdî (latînî)‎</a>
+          </li>
+                            <li>
+            <a class="lang-link" href="#" data-lang="lv">Latviešu</a>
+          </li>
+                            <li>
+            <a class="lang-link" href="#" data-lang="lt">Lietuvių</a>
+          </li>
+                            <li>
+            <a class="lang-link" href="#" data-lang="lmo">Lumbaart</a>
+          </li>
+                            <li>
+            <a class="lang-link" href="#" data-lang="lb">Lëtzebuergesch</a>
+          </li>
+                            <li>
+            <a class="lang-link" href="#" data-lang="hu">Magyar</a>
+          </li>
+                            <li>
+            <a class="lang-link" href="#" data-lang="fit">Meänkieli</a>
+          </li>
+                            <li>
+            <a class="lang-link" href="#" data-lang="mi">Māori</a>
+          </li>
+                            <li>
+            <a class="lang-link" href="#" data-lang="nl">Nederlands</a>
+          </li>
+                            <li>
+            <a class="lang-link" href="#" data-lang="nb">Norsk bokmål</a>
+          </li>
+                            <li>
+            <a class="lang-link" href="#" data-lang="oc">Occitan</a>
+          </li>
+                            <li>
+            <a class="lang-link" href="#" data-lang="uz">Oʻzbekcha/ўзбекча</a>
+          </li>
+                            <li>
+            <a class="lang-link" href="#" data-lang="pcd">Picard</a>
+          </li>
+                            <li>
+            <a class="lang-link" href="#" data-lang="pl">Polski</a>
+          </li>
+                            <li>
+            <a class="lang-link" href="#" data-lang="pt">Português</a>
+          </li>
+                            <li>
+            <a class="lang-link" href="#" data-lang="pt-br">Português do Brasil</a>
+          </li>
+                            <li>
+            <a class="lang-link" href="#" data-lang="ksh">Ripoarisch</a>
+          </li>
+                            <li>
+            <a class="lang-link" href="#" data-lang="ro">Română</a>
+          </li>
+                            <li>
+            <a class="lang-link" href="#" data-lang="sk">Slovenčina</a>
+          </li>
+                            <li>
+            <a class="lang-link" href="#" data-lang="sl">Slovenščina</a>
+          </li>
+                            <li>
+            <a class="lang-link" href="#" data-lang="sh">Srpskohrvatski / српскохрватски</a>
+          </li>
+                            <li>
+            <a class="lang-link" href="#" data-lang="fi">Suomi</a>
+          </li>
+                            <li>
+            <a class="lang-link" href="#" data-lang="sv">Svenska</a>
+          </li>
+                            <li>
+            <a class="lang-link" href="#" data-lang="kab">Taqbaylit</a>
+          </li>
+                            <li>
+            <a class="lang-link" href="#" data-lang="vi">Tiếng Việt</a>
+          </li>
+                            <li>
+            <a class="lang-link" href="#" data-lang="tr">Türkçe</a>
+          </li>
+                            <li>
+            <a class="lang-link" href="#" data-lang="diq">Zazaki</a>
+          </li>
+                            <li>
+            <a class="lang-link" href="#" data-lang="ang">Ænglisc</a>
+          </li>
+                            <li>
+            <a class="lang-link" href="#" data-lang="cs">čeština</a>
+          </li>
+                            <li>
+            <a class="lang-link" href="#" data-lang="el">Ελληνικά</a>
+          </li>
+                            <li>
+            <a class="lang-link" href="#" data-lang="ba">башҡортса</a>
+          </li>
+                            <li>
+            <a class="lang-link" href="#" data-lang="be">беларуская</a>
+          </li>
+                            <li>
+            <a class="lang-link" href="#" data-lang="be-tarask">беларуская (тарашкевіца)‎</a>
+          </li>
+                            <li>
+            <a class="lang-link" href="#" data-lang="bg">български</a>
+          </li>
+                            <li>
+            <a class="lang-link" href="#" data-lang="mk">македонски</a>
+          </li>
+                            <li>
+            <a class="lang-link" href="#" data-lang="mn">монгол</a>
+          </li>
+                            <li>
+            <a class="lang-link" href="#" data-lang="ce">нохчийн</a>
+          </li>
+                            <li>
+            <a class="lang-link" href="#" data-lang="ru">русский</a>
+          </li>
+                            <li>
+            <a class="lang-link" href="#" data-lang="sr-ec">српски (ћирилица)‎</a>
+          </li>
+                            <li>
+            <a class="lang-link" href="#" data-lang="tt-cyrl">татарча</a>
+          </li>
+                            <li>
+            <a class="lang-link" href="#" data-lang="tg-cyrl">тоҷикӣ</a>
+          </li>
+                            <li>
+            <a class="lang-link" href="#" data-lang="uk">українська</a>
+          </li>
+                            <li>
+            <a class="lang-link" href="#" data-lang="kk-cyrl">қазақша (кирил)‎</a>
+          </li>
+                            <li>
+            <a class="lang-link" href="#" data-lang="hy">Հայերեն</a>
+          </li>
+                            <li>
+            <a class="lang-link" href="#" data-lang="yi">ייִדיש</a>
+          </li>
+                            <li>
+            <a class="lang-link" href="#" data-lang="he">עברית</a>
+          </li>
+                            <li>
+            <a class="lang-link" href="#" data-lang="ur">اردو</a>
+          </li>
+                            <li>
+            <a class="lang-link" href="#" data-lang="ar">العربية</a>
+          </li>
+                            <li>
+            <a class="lang-link" href="#" data-lang="azb">تۆرکجه</a>
+          </li>
+                            <li>
+            <a class="lang-link" href="#" data-lang="bgn">روچ کپتین بلوچی</a>
+          </li>
+                            <li>
+            <a class="lang-link" href="#" data-lang="skr-arab">سرائیکی</a>
+          </li>
+                            <li>
+            <a class="lang-link" href="#" data-lang="sd">سنڌي</a>
+          </li>
+                            <li>
+            <a class="lang-link" href="#" data-lang="fa">فارسی</a>
+          </li>
+                            <li>
+            <a class="lang-link" href="#" data-lang="pnb">پنجابی</a>
+          </li>
+                            <li>
+            <a class="lang-link" href="#" data-lang="ps">پښتو</a>
+          </li>
+                            <li>
+            <a class="lang-link" href="#" data-lang="ckb">کوردی</a>
+          </li>
+                            <li>
+            <a class="lang-link" href="#" data-lang="ne">नेपाली</a>
+          </li>
+                            <li>
+            <a class="lang-link" href="#" data-lang="hi">हिन्दी</a>
+          </li>
+                            <li>
+            <a class="lang-link" href="#" data-lang="as">অসমীয়া</a>
+          </li>
+                            <li>
+            <a class="lang-link" href="#" data-lang="bn">বাংলা</a>
+          </li>
+                            <li>
+            <a class="lang-link" href="#" data-lang="mni">মেইতেই লোন্</a>
+          </li>
+                            <li>
+            <a class="lang-link" href="#" data-lang="ta">தமிழ்</a>
+          </li>
+                            <li>
+            <a class="lang-link" href="#" data-lang="te">తెలుగు</a>
+          </li>
+                            <li>
+            <a class="lang-link" href="#" data-lang="ml">മലയാളം</a>
+          </li>
+                            <li>
+            <a class="lang-link" href="#" data-lang="th">ไทย</a>
+          </li>
+                            <li>
+            <a class="lang-link" href="#" data-lang="mnw">ဘာသာ မန်</a>
+          </li>
+                            <li>
+            <a class="lang-link" href="#" data-lang="my">မြန်မာဘာသာ</a>
+          </li>
+                            <li>
+            <a class="lang-link" href="#" data-lang="ka">ქართული</a>
+          </li>
+                            <li>
+            <a class="lang-link" href="#" data-lang="ti">ትግርኛ</a>
+          </li>
+                            <li>
+            <a class="lang-link" href="#" data-lang="km">ភាសាខ្មែរ</a>
+          </li>
+                            <li>
+            <a class="lang-link" href="#" data-lang="zh-hans">中文（简体）‎</a>
+          </li>
+                            <li>
+            <a class="lang-link" href="#" data-lang="zh-hant">中文（繁體）‎</a>
+          </li>
+                            <li>
+            <a class="lang-link" href="#" data-lang="ja">日本語</a>
+          </li>
+                            <li>
+            <a class="lang-link" href="#" data-lang="yue">粵語</a>
+          </li>
+                            <li>
+            <a class="lang-link" href="#" data-lang="ko">한국어</a>
+          </li>
+              </ul>
+    </div>
+  </div>
+  <div class="navbar-collapse collapse interapp-navigation">
+    <a class="home-link pull-left" href="/"></a>
+    <ol class="interapp-links nav navbar-nav navbar-left">
+                                            <li class="interapp-links--entry active" role="presentation">
+            <a class="interapp-link interapp-link--pageviews" href="../html/pageviews.html">
+              Seitenaufrufe            </a>
+          </li>
+                                        <li class="interapp-links--entry" role="presentation">
+            <a class="interapp-link interapp-link--langviews" href="../html/langviews.html">
+              Langviews            </a>
+          </li>
+                                        <li class="interapp-links--entry" role="presentation">
+            <a class="interapp-link interapp-link--topviews" href="../html/topviews.html">
+              Topviews            </a>
+          </li>
+                                        <li class="interapp-links--entry" role="presentation">
+            <a class="interapp-link interapp-link--siteviews" href="../html/siteviews.html">
+              Siteviews            </a>
+          </li>
+                                        <li class="interapp-links--entry" role="presentation">
+            <a class="interapp-link interapp-link--massviews" href="../html/massviews.html">
+              Massviews            </a>
+          </li>
+                                        <li class="interapp-links--entry" role="presentation">
+            <a class="interapp-link interapp-link--redirectviews" href="../html/redirectviews.html">
+              Weiterleitungsaufrufe            </a>
+          </li>
+                                        <li class="interapp-links--entry" role="presentation">
+            <a class="interapp-link interapp-link--userviews" href="../html/userviews.html">
+              Userviews            </a>
+          </li>
+                                        <li class="interapp-links--entry" role="presentation">
+            <a class="interapp-link interapp-link--mediaviews" href="../html/mediaviews.html">
+              Mediaviews            </a>
+          </li>
+                    <li class="interapp-links--more dropdown hidden">
+        <a class="interapp-link dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+          Weitere          <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu"></ul>
+      </li>
+    </ol>
+  </div>
+</nav>
+  <header class="site-header">
+    <h4 class="text-center">
+      <strong>
+                  Pageviews Analysis              </strong>
+      <small class="app-description">
+                  Vergleich der Seitenaufrufe auf mehreren Seiten              </small>
+    </h4>
+  </header>
+    <aside class="col-lg-2 col-md-2 page-selector">
+      <header class="text-center">
+        <h4>
+          Optionen        </h4>
+      </header>
+      <div class="page-selector--container">
+        <div class="date-selector">
+          <label for="range-input">
+            Zeitraum          </label>
+          <div class="btn-group dropdown latest-group">
+            <button class="btn btn-default btn-xs dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <span class="latest-text">
+                Letzte              </span>
+              <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-right date-latest">
+                              <li>
+                  <a href="#" data-value="10">10</a>
+                </li>
+                              <li>
+                  <a href="#" data-value="20">20</a>
+                </li>
+                              <li>
+                  <a href="#" data-value="30">30</a>
+                </li>
+                              <li>
+                  <a href="#" data-value="60">60</a>
+                </li>
+                              <li>
+                  <a href="#" data-value="90">90</a>
+                </li>
+                          </ul>
+          </div>
+          <input class="form-control date-range-selector" id="range-input">
+        </div>
+        <div class="month-selector input-daterange clearfix">
+          <label for="month-start">
+            Zeitraum          </label>
+          <div>
+            <input class="form-control input-control month-selector-start pull-left" id="month-start" readonly="readonly">
+            <input class="form-control input-control month-selector-end pull-left" id="month-end" readonly="readonly">
+          </div>
+        </div>
+        <div>
+          <label for="date-type-select">
+            Datumstyp          </label>
+          <select class="form-control" id="date-type-select">
+            <option value="daily">
+              Täglich            </option>
+            <option value="monthly">
+              Monatlich            </option>
+          </select>
+        </div>
+        <div>
+          <label for="project-input">
+            Projekt          </label>
+          <input class="form-control aqs-project-input" id="project-input" placeholder="en.wikipedia.org" spellcheck="false">
+        </div>
+        <div>
+          <label for="platform-select">
+            Plattform          </label>
+          <select class="form-control" id="platform-select">
+            <option value="all-access">
+              Alle            </option>
+            <option value="desktop">
+              Desktop            </option>
+            <option value="mobile-app">
+              Mobile App            </option>
+            <option value="mobile-web">
+              Mobiles Web            </option>
+          </select>
+        </div>
+        <div>
+          <label for="agent-select">
+            Agent            <a class="help-link" href="../html/faq.html">
+              <span class="glyphicon glyphicon-question-sign"></span>
+            </a>
+          </label>
+          <select class="form-control" id="agent-select">
+            <option value="all-agents">
+              Alle            </option>
+            <option selected="selected" value="user">
+              User            </option>
+            <option value="spider">
+              Spider            </option>
+            <option value="automated">
+              Automatisch            </option>
+          </select>
+        </div>
+        <div>
+          <label>
+            <input id="redirects-checkbox" type="checkbox">
+            Weiterleitungen einschließen            <a class="help-link" href="../html/faq.html">
+              <span class="glyphicon glyphicon-question-sign"></span>
+            </a>
+          </label>
+        </div>
+      </div>
+    </aside>
+    <main class="col-lg-8 col-md-10">
+      <div>
+        <label for="select2-input">
+          Seiten          <small class="text-muted num-entities-info">
+            Bis zu 10 Seiten eingeben          </small>
+        </label>
+        <span class="clear-pages pull-right">
+          ✕
+          Löschen        </span>
+        <select class="col-lg-12 invisible" id="select2-input" multiple="multiple"></select>
+      </div>
+      <div class="col-lg-12 data-links invisible">
+  <div class="chart-buttons">
+    <button class="btn btn-default btn-sm btn-chart-type chart-specific js-test-change-chart" data-target="#chart-type-modal" data-toggle="modal"><span class="glyphicon glyphicon-th"></span>
+    Diagrammtyp</button>
+    <a class="btn btn-default btn-sm permalink" href=""><span class="glyphicon glyphicon-link"></span>
+    Permanentlink</a>
+    <input class="permalink-copy">
+    <div class="btn-group dropdown download-btn-group">
+      <button class="btn btn-default btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <span class="glyphicon glyphicon-download-alt"></span>
+        Herunterladen        <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu">
+        <li>
+          <a class="download-csv" href="#">
+            CSV          </a>
+        </li>
+        <li>
+          <a class="download-json" href="#">
+            JSON          </a>
+        </li>
+        <li class="chart-specific">
+          <a class="download-png" href="#">
+            PNG          </a>
+        </li>
+        <li class="divider chart-specific" role="separator"></li>
+        <li class="chart-specific">
+          <a class="print-chart" href="#">
+            <span class="glyphicon glyphicon-print"></span>
+            Drucken          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <span class="chart-toggles chart-specific">
+    <span class="pull-right">
+      <label class="logarithmic-scale">
+        <input id="logarithmic-checkbox" type="checkbox">
+        Logarithmische Skala      </label>
+    </span>
+    <span class="pull-right">
+      <label class="begin-at-zero">
+        <input class="begin-at-zero-option" type="checkbox">
+        Bei null beginnen      </label>
+    </span>
+    <span class="pull-right">
+      <label class="show-labels">
+        <input class="show-labels-option" type="checkbox">
+        Werte anzeigen      </label>
+    </span>
+  </span>
+</div>
+      <!-- Chart -->
+      <div class="chart-container">
+        <canvas id="chart"></canvas>
+      </div>
+      <div class="message-container col-lg-12"></div>
+    </main>
+    <aside class="col-lg-2 visible-lg-block summary-column">
+      <header class="text-center">
+        <h4>
+          Summen        </h4>
+      </header>
+      <div class="summary-column--container">
+        <div class="chart-legend col-lg-12 clearfix"></div>
+      </div>
+    </aside>
+    <div class="output col-lg-10 col-lg-offset-1">
+      <h4 class="single-page-stats text-center"></h4>
+      <h5 class="single-entity-ranking text-center"></h5>
+      <div class="single-page-legend hidden-lg col-md-4 col-md-offset-4 tm"></div>
+            <div class="table-view--wrapper">
+        <table class="table table-hover table-view">
+          <thead class="table-view--header">
+            <tr>
+              <th></th>
+                              <th class="table-view--title">
+                  <span class="sort-link sort-link--title" data-type="title">
+                    <span class="col-heading">
+                      Seitentitel                    </span>
+                    <span class="glyphicon glyphicon-sort"></span>
+                  </span>
+                </th>
+                              <th class="table-view--class">
+                  <span class="sort-link sort-link--class" data-type="class">
+                    <span class="col-heading">
+                      Klasse                    </span>
+                    <span class="glyphicon glyphicon-sort"></span>
+                  </span>
+                </th>
+                              <th class="table-view--views">
+                  <span class="sort-link sort-link--views" data-type="views">
+                    <span class="col-heading">
+                      Aufrufe                    </span>
+                    <span class="glyphicon glyphicon-sort"></span>
+                  </span>
+                </th>
+                              <th class="table-view--average">
+                  <span class="sort-link sort-link--average" data-type="average">
+                    <span class="col-heading">
+                      Täglicher Durchschnitt                    </span>
+                    <span class="glyphicon glyphicon-sort"></span>
+                  </span>
+                </th>
+                              <th class="table-view--edits">
+                  <span class="sort-link sort-link--edits" data-type="edits">
+                    <span class="col-heading">
+                      Bearbeitungen                    </span>
+                    <span class="glyphicon glyphicon-sort"></span>
+                  </span>
+                </th>
+                              <th class="table-view--editors">
+                  <span class="sort-link sort-link--editors" data-type="editors">
+                    <span class="col-heading">
+                      Autoren                    </span>
+                    <span class="glyphicon glyphicon-sort"></span>
+                  </span>
+                </th>
+                              <th class="table-view--size">
+                  <span class="sort-link sort-link--size" data-type="size">
+                    <span class="col-heading">
+                      Größe                    </span>
+                    <span class="glyphicon glyphicon-sort"></span>
+                  </span>
+                </th>
+                              <th class="table-view--protection">
+                  <span class="sort-link sort-link--protection" data-type="protection">
+                    <span class="col-heading">
+                      Seitenschutz                    </span>
+                    <span class="glyphicon glyphicon-sort"></span>
+                  </span>
+                </th>
+                              <th class="table-view--watchers">
+                  <span class="sort-link sort-link--watchers" data-type="watchers">
+                    <span class="col-heading">
+                      Beobachter                    </span>
+                    <span class="glyphicon glyphicon-sort"></span>
+                  </span>
+                </th>
+                            <th>
+                <span>
+                  Links                </span>
+              </th>
+            </tr>
+          </thead>
+          <tbody class="output-list"></tbody>
+        </table>
+      </div>
+    </div>
+    <div id="ad_blocker_notice" style="display:none">
+  <div class="alert alert-danger alert-dismissable">
+    <button class="close" type="button" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">
+        ×
+      </span>
+    </button>
+    <div class="text-center">
+      <strong>Es sieht aus, als würden Sie einen Werbeblocker verwenden!</strong>
+      <br>
+      Die Analyse der Seitenaufrufe zeigt keine Anzeigen an, aber Ihr Werbeblocker kann die Anzeige einiger Metriken verhindern, weil sie das Wort 'Seitenaufruf' enthalten.      <br>
+      Wenn das Werkzeug nicht richtig funktioniert, deaktivieren Sie bitte den Werbeblocker für <b>pageviews.toolforge.org</b>    </div>
+  </div>
+</div>
+<div class="spacer"></div>
+<footer>
+  <hr>
+  <span>
+                Bereitgestellt von <a href="../html/User:MusikAnimal.html">MusikAnimal</a>, <a href="../html/User:Kaldari.html">Kaldari</a> und <a href="../html/User:Mforns_(WMF).html">Marcel Ruiz Forns</a>.  </span>
+  <div>
+    <span class="nowrap">
+                  Gehostet mit <span class="heart">♥</span> auf <a href="../html/Portal:Tool_Labs.html">Toolforge</a>.    </span>
+    <span class="nowrap">
+                        Die Übersetzungen werden zur Verfügung gestellt von <a href="../html/translatewiki.net.html">translatewiki.net</a>, <a href="../html/jquery.i18n.html">jQuery.i18n</a> und <a href="../html/intuition.toolforge.org.html">Intuition</a>.    </span>
+  </div>
+  <div>
+          <a href="../html/faq.html">Häufig gestellte Fragen</a>
+      ·
+      <a href="../html/url_structure.html">URL-Struktur</a>
+      ·
+        <a href="../html/pageviews.html">Quellcode ansehen</a>
+    ·
+    <a href="../html/Talk:Pageviews_Analysis.html">Ein Problem melden</a>
+  </div>
+</footer>
+<script type="text/javascript">
+//<![CDATA[
+  if ( !window.noAdBlockers ) {
+    var noticeContent = document.getElementById('ad_blocker_notice');
+    document.querySelector('.site-header').innerHTML = noticeContent.innerHTML + document.querySelector('.site-header').innerHTML;
+  }
+  
+//]]>
+</script>
+    <div class="modal fade" id="chart-type-modal" role="dialog" tabindex="-1">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button class="close" aria-label="Close" data-dismiss="modal" type="button">
+          <span aria-hidden="true">×</span>
+        </button>
+        <h4 class="modal-title">
+          Diagrammtypen        </h4>
+      </div>
+      <div class="modal-body">
+        <div>
+          <strong class="multi-page-chart-node">
+            Seiten nach täglichen Seitenaufrufen          </strong>
+          <span class="modal-chart-type">
+            <a class="js-test-line-chart" data-dismiss="modal" data-type="line" href="#">
+              <img src="../images/line-chart-small.jpg" alt="Linie">
+              Linie            </a>
+          </span>
+          <span class="modal-chart-type">
+            <a class="js-test-bar-chart" data-dismiss="modal" data-type="bar" href="#">
+              <img src="../images/bar-chart-small.jpg" alt="Säule">
+              Säule            </a>
+          </span>
+          <span class="modal-chart-type">
+            <a data-dismiss="modal" data-type="radar" href="#">
+              <img src="../images/radar-chart-small.jpg" alt="Netz">
+              Netz            </a>
+          </span>
+        </div>
+        <div class="multi-page-chart-node">
+          <hr>
+          <div>
+            <strong>
+              Seiten nach der Gesamtanzahl von Seitenaufrufen            </strong>
+            <span class="modal-chart-type">
+              <a class="js-test-pie-chart" data-dismiss="modal" data-type="pie" href="#">
+                <img src="../images/pie-chart-small.jpg" alt="Kreis">
+                Kreis              </a>
+            </span>
+            <span class="modal-chart-type">
+              <a data-dismiss="modal" data-type="doughnut" href="#">
+                <img src="../images/doughnut-chart-small.jpg" alt="Ring">
+                Ring              </a>
+            </span>
+            <span class="modal-chart-type">
+              <a data-dismiss="modal" data-type="polarArea" href="#">
+                <img src="../images/polararea-chart-small.jpg" alt="Polar Area">
+                Polar Area              </a>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-default" data-dismiss="modal" type="button">
+          Abbrechen        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade settings-modal" id="settings-modal" role="dialog" tabindex="-1">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button aria-label="Close" class="close" data-dismiss="modal" type="button">
+          <span aria-hidden="true">×</span>
+        </button>
+        <h4 class="modal-title">
+          Einstellungen        </h4>
+      </div>
+      <form class="modal-body">
+        <p>
+          Deine Einstellungen bleiben auf dem gleichen Browser und Computer gespeichert.        </p>
+        <fieldset>
+          <div class="checkbox">
+            <label>
+              <input name="alwaysRedirects" type="checkbox">
+                Immer Weiterleitungen einbeziehen (potenziell langsam)              
+            </label>
+          </div>
+        </fieldset>
+        <fieldset class="radio-list search-method-options">
+          Suchmethode:          <div class="radio">
+            <label>
+              <input class="js-test-prefixsearch" name="autocomplete" type="radio" value="autocomplete">
+              Autovervollständigung            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input class="js-test-opensearch" name="autocomplete" type="radio" value="autocomplete_redirects">
+              Autovervollständigung inklusive Weiterleitungen            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input name="autocomplete" type="radio" value="no_autocomplete">
+              Keine Autovervollständigung            </label>
+          </div>
+        </fieldset>
+        <fieldset>
+          Lokalisierung:          <div class="checkbox">
+            <label>
+              <input class="js-test-format-numbers" name="numericalFormatting" type="checkbox">
+              Numerische Daten formatieren            </label>
+          </div>
+          <div class="checkbox">
+            <label>
+              <input class="js-test-localize-dates" name="localizeDateFormat" type="checkbox">
+              Datumsformat lokalisieren            </label>
+          </div>
+        </fieldset>
+        <fieldset class="chart-specific">
+          Diagrammeinstellungen:          <div class="checkbox">
+            <label>
+              <input class="js-test-autolog" name="autoLogDetection" type="checkbox">
+              Logarithmische Skala automatisch verwenden, falls anwendbar.            </label>
+          </div>
+          <div class="checkbox">
+            <label>
+              <input class="js-test-begin-at-zero" name="beginAtZero" type="checkbox">
+              Immer die Y-Achse, beginnend bei null, anzeigen.            </label>
+          </div>
+          <div class="checkbox">
+            <label>
+              <input class="js-test-remember-chart" name="rememberChart" type="checkbox">
+              Diagrammeinstellung speichern            </label>
+          </div>
+          <div class="checkbox">
+            <label>
+              <input class="js-test-bezier-curve" name="bezierCurve" type="checkbox">
+              Bézierkurven auf Liniendiagrammen verwenden            </label>
+          </div>
+        </fieldset>
+      </form>
+      <div class="modal-footer">
+        <button class="btn btn-default cancel-settings-btn" data-dismiss="modal" type="button">
+          Abbrechen        </button>
+        <button class="btn btn-primary save-settings-btn" data-dismiss="modal" type="button">
+          Speichern        </button>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+</body></html>
